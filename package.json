@@ -1,0 +1,15 @@
+{
+  "name": "simple-stats",
+  "version": "1.0.0",
+  "description": "simple statistics functions",
+  "main": "stats.js",
+  "author": "Kody A Kantor",
+  "license": "MIT",
+  "dependencies": {
+    "assert-plus": "1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KodyKantor/node-simple-stats"
+  }
+}
