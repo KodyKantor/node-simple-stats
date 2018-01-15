@@ -1,5 +1,5 @@
 {
-  "name": "simple-stats",
+  "name": "stats-tool",
   "version": "1.0.0",
   "description": "simple statistics functions",
   "main": "stats.js",
@@ -10,6 +10,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/KodyKantor/node-simple-stats"
+    "url": "https://github.com/KodyKantor/node-stats-tool"
   }
 }
