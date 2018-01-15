@@ -46,23 +46,24 @@ Stats.prototype.sum = function sum(count) {
 	}
 	var self = this;
 	var num_to_sum;
-	var sum;
+	var m_sum;
 	var retval = [];
-	var i = j = 0;
+	var i = 0;
+	var j = 0;
 
 	Object.keys(this.map).forEach(function (hash) {
-		sum = 0;
+		m_sum = 0;
 		if (count) {
 			num_to_sum = count;
 		} else {
 			num_to_sum = self.map[hash].length;
 		}
-		for(i = self.map[hash].length - 1;
+		for (i = self.map[hash].length - 1;
 		    j < num_to_sum && i >= 0;
 		    j++, i--) {
-			sum += self.map[hash][i];
+			m_sum += self.map[hash][i];
 		}
-		retval.push([self.labelMap[hash], sum]);
+		retval.push([self.labelMap[hash], m_sum]);
 		j = 0;
 	});
 	return (retval);
