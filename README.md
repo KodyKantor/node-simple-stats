@@ -1,8 +1,8 @@
-# node-simple-stats: simple statistics functions
+# node-stats-tool: simple statistics functions
 
 ## Install
 ```
-$ npm install
+$ npm install stats-tool
 ```
 
 ## License
