@@ -94,6 +94,37 @@ Stats.prototype.average = function average(count) {
 };
 
 /*
+ * Find the median value from each of the label sets.
+ * Returns an array like this:
+ * [
+ *   [ label_object, median ],
+ *   [ label_object, median ]
+ * ]
+ */
+Stats.prototype.median = function median() {
+	var self = this;
+	var sorted_array;
+	var m_median;
+	var midpoint;
+	var retval = [];
+
+	Object.keys(this.map).forEach(function (hash) {
+		sorted_array = self.map[hash].sort();
+		midpoint = sorted_array.length / 2;
+		if (sorted_array.length % 2 === 1) {
+			/* odd elements - round down the mid point */
+			m_median = sorted_array[midpoint - 0.5];
+		} else {
+			/* even elements - take average of middle two points */
+			m_median = (sorted_array[midpoint] +
+			    sorted_array[midpoint - 1]) / 2;
+		}
+		retval.push([self.labelMap[hash], m_median]);
+	});
+	return (retval);
+};
+
+/*
  * Convert the label key-value pairs into an md5 string
  */
 function hashObj(obj) {
